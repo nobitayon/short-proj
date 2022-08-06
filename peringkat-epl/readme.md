@@ -24,7 +24,8 @@ Font tulisan yang digunakan di animasi adalah comic sans yang dapat diperoleh pa
    * Simpan hasil ekstraksi <a href="https://github.com/spite/ccapture.js/">ccapture.js</a> yang telah di download di main
 2. Buka index.html di code editor dan jalankan di server lokal. Setelah animasi di browser selesai, akan muncul opsi untuk mendownload video.
 
-Hasil animasi video terdapat di link berikut <a href="https://youtu.be/mz_FaohTwWI">link youtube</a>
+Hasil animasi video terdapat di link berikut <a href="https://youtu.be/mz_FaohTwWI">link youtube</a>.
+
 Maaf jika terdapat beberapa baris kode atau langkah yang tidak efektif.
 
 Terimakasih.
