@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Add question and anwer</title>
+{% endblock %}
+
+{% block body %}
+<form action="/addqa" method="POST">
+    <input type="text" name="question" id="question" value="question">
+    <input type="text" name="answer" id="answer" value="answer">
+    <input type="text" name="humanize" id="humanize" value="humanize text">
+    <input type="text" name="category" id="category" value="category">
+    <input type="submit" value="add QnA">
+</form>
+<h2>List of defined questions and answer</h2>
+<table>
+    <tr>
+        <th>Questions</th>
+        <th>Answer</th>
+        <th>Category</th>
+    </tr>
+    {% for content in qna %}
+        <tr>
+            <td>{{ content.question }}</td>
+            <td>{{ content.answer }}</td>
+            <td>{{ content.category }}</td>
+            <td>
+                <a href="/delete/{{content.id}}">Delete</a>
+                <br>
+                <a href="/update/{{content.id}}">Update</a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+<a href="/">Back to home</a>
+{% endblock %}

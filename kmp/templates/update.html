@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Updating question and anwer</title>
+{% endblock %}
+
+{% block body %}
+<form action="/update/{{qna.id}}" method="POST">
+    <input type="text" name="question" id="question" value="question">
+    <input type="text" name="answer" id="answer" value="answer">
+    <input type="text" name="humanize" id="humanize" value="humanize">
+    <input type="text" name="category" id="category" value="category">
+    <input type="submit" value="add QnA">
+</form>
+<a href="/">Back to home</a>
+{% endblock %}

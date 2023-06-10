@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Chatbot</title>
+{% endblock %}
+
+{% block body %}
+<h1>Chat</h1>
+<div>
+    <a href="/addqa">Add questions and answer to database</a>
+</div>
+
+<div>
+    <table>
+        <tr>
+            <th>Questions</th>
+            <th>Answer</th>
+        </tr>
+        {% for content in qna %}
+            <tr>
+                <td>{{ content.question }}</td>
+                <td>{{ content.answer }}</td>
+                <td><a href="/deleteU/{{content.id}}/delA/{{content.category}}">Delete</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<div>
+    <form action="/kmp" method="POST">
+        <h3>Please type your question</h3>
+        <input type="text" name="question" id="question">
+        <input type="submit" value="submit your question">
+    </form>
+</div>
+{% endblock %}
